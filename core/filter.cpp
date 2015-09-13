@@ -2,8 +2,14 @@
 
 using namespace pathtracer;
 
-Filter::Filter(Film* film)
-    : film(film)
+Filter::Filter()
+    : _film(nullptr)
+{
+
+}
+
+Filter::Filter(Film* f)
+    : _film(f)
 {
 
 }

@@ -1,13 +1,10 @@
-//
-// Created by pavel on 30.7.15.
-//
-
 #include "film.h"
 
 using namespace pathtracer;
 
-Film::Film(size_t w, size_t h) : width(w),
-                                 height(h)
+Film::Film(size_t w, size_t h)
+    : width(w),
+      height(h)
 {
     samples = new std::vector<Sample>[w * h];
 }
@@ -33,7 +30,7 @@ void Film::addSample(float x, float y, Vec3f luminance)
     samples[offset(pX, pY)].push_back(s);
 }
 
-std::vector<const Sample&> Film::getSamples(float x1, float y1, float x2, float y2)
+std::vector<const Sample &> Film::getSamples(float x1, float y1, float x2, float y2)
 {
     if (x1 > x2) std::swap(x1, x2);
     if (y1 > y2) std::swap(y1, y2);
@@ -41,12 +38,12 @@ std::vector<const Sample&> Film::getSamples(float x1, float y1, float x2, float 
     assert(0 <= x1 && x2 < width);
     assert(0 <= y1 && y2 < height);
 
-    std::vector<const Sample&> ret;
-    for (int x = (int) x1; x <= (int)x2; ++x)
-        for (int y = (int) y1; y <= (int)y2; ++y)
+    std::vector<const Sample &> ret;
+    for (int x = (int) x1; x <= (int) x2; ++x)
+        for (int y = (int) y1; y <= (int) y2; ++y)
         {
-            const std::vector<Sample>& pixel = samples[offset(x, y)];
-            for (const Sample& s : pixel)
+            const std::vector<Sample> &pixel = samples[offset(x, y)];
+            for (const Sample &s : pixel)
             {
                 if (x1 <= x && x < x2
                     && y1 <= y && y < y2)

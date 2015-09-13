@@ -14,14 +14,26 @@ namespace pathtracer
 class Filter
 {
 public:
-    Filter(Film* film);
+    Filter();
+    Filter(Film* f);
     virtual ~Filter();
 
     virtual Vec3f pixel(int x, int y) const = 0;
 
+    Film* film() const
+    {
+        return _film;
+    }
+
+    void setFilm(Film *film)
+    {
+        _film = film;
+    }
+
 protected:
-    Film* film;
+    Film* _film;
 };
+
 }
 
 #endif //PATHTRACER_FILTER_H

@@ -18,8 +18,6 @@ namespace pathtracer
 class Ray
 {
 public:
-
-
     Ray()
         : mint(0.f),
           maxt(INF),
