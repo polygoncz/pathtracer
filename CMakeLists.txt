@@ -3,7 +3,7 @@ project(pathtracer)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES filters/SimpleFilter.cpp filters/SimpleFilter.h)
+set(SOURCE_FILES filters/SimpleFilter.cpp filters/SimpleFilter.h exporters/PPMExporter.cpp exporters/PPMExporter.h)
 
 include_directories(${CMAKE_SOURCE_DIR})
 

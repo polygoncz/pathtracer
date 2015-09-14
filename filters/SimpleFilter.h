@@ -11,9 +11,9 @@ namespace pathtracer
 class SimpleFilter : public Filter
 {
 public:
-    SimpleFilter(Film* film);
+    SimpleFilter();
     
-    Vec3f pixel(int x, int y) const override;
+    Vec3f pixel(int x, int y, Film *film) const override;
 };
 
 }

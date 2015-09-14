@@ -3,8 +3,8 @@
 using namespace pathtracer;
 
 Film::Film(size_t w, size_t h)
-    : width(w),
-      height(h)
+    : w(w),
+      h(h)
 {
     samples = new std::vector<Sample>[w * h];
 }
@@ -16,8 +16,8 @@ Film::~Film()
 
 void Film::addSample(float x, float y, Vec3f luminance)
 {
-    assert(0 <= x && x < width);
-    assert(0 <= y && y < height);
+    assert(0 <= x && x < w);
+    assert(0 <= y && y < h);
 
     size_t pX = static_cast<size_t>(x);
     size_t pY = static_cast<size_t>(y);
@@ -35,8 +35,8 @@ std::vector<const Sample &> Film::getSamples(float x1, float y1, float x2, float
     if (x1 > x2) std::swap(x1, x2);
     if (y1 > y2) std::swap(y1, y2);
 
-    assert(0 <= x1 && x2 < width);
-    assert(0 <= y1 && y2 < height);
+    assert(0 <= x1 && x2 < w);
+    assert(0 <= y1 && y2 < h);
 
     std::vector<const Sample &> ret;
     for (int x = (int) x1; x <= (int) x2; ++x)

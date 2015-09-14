@@ -3,13 +3,6 @@
 using namespace pathtracer;
 
 Filter::Filter()
-    : _film(nullptr)
-{
-
-}
-
-Filter::Filter(Film* f)
-    : _film(f)
 {
 
 }

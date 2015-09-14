@@ -15,23 +15,9 @@ class Filter
 {
 public:
     Filter();
-    Filter(Film* f);
     virtual ~Filter();
 
-    virtual Vec3f pixel(int x, int y) const = 0;
-
-    Film* film() const
-    {
-        return _film;
-    }
-
-    void setFilm(Film *film)
-    {
-        _film = film;
-    }
-
-protected:
-    Film* _film;
+    virtual Vec3f pixel(int x, int y, Film* film) const = 0;
 };
 
 }

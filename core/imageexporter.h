@@ -17,7 +17,7 @@ public:
     ImageExporter();
     virtual ~ImageExporter();
 
-    virtual void save(const char* path, Filter* filter) const = 0;
+    virtual void save(const char *path, Film *film, Filter *filter) const = 0;
 };
 
 }

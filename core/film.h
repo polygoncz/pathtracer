@@ -24,16 +24,22 @@ public:
     void addSample(float x, float y, Vec3f luminance);
     std::vector<const Sample&> getSamples(float x1, float y1, float x2, float y2);
 
+    inline size_t width() const
+    { return w; }
+
+    inline size_t height() const
+    { return h; }
+
 private:
     inline size_t offset(size_t x, size_t y)
     {
-        assert(0 <= x && x < width);
-        assert(0 <= y && y < height);
+        assert(0 <= x && x < w);
+        assert(0 <= y && y < h);
 
-        return x * height + y;
+        return x * h + y;
     }
 
-    size_t width, height;
+    size_t w, h;
     std::vector<Sample>* samples;
 };
 
