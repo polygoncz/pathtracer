@@ -5,8 +5,8 @@
 #ifndef PATHTRACER_FILTER_H
 #define PATHTRACER_FILTER_H
 
-#include "core/core.h"
-#include "film.h"
+#include "Core.h"
+#include "Film.h"
 
 namespace pathtracer
 {

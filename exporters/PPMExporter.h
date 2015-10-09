@@ -5,7 +5,7 @@
 #ifndef PATHTRACER_PPMEXPORTER_H
 #define PATHTRACER_PPMEXPORTER_H
 
-#include "core/imageexporter.h"
+#include "core/ImageExporter.h"
 
 namespace pathtracer
 {

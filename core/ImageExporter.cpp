@@ -2,7 +2,7 @@
 // Created by pavel on 1.8.15.
 //
 
-#include "imageexporter.h"
+#include "ImageExporter.h"
 
 using namespace pathtracer;
 

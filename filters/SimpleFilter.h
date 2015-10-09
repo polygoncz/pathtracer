@@ -3,7 +3,7 @@
 #ifndef PATHTRACER_SIMPLEFILTER_H
 #define PATHTRACER_SIMPLEFILTER_H
 
-#include "core/filter.h"
+#include "core/Filter.h"
 
 namespace pathtracer
 {

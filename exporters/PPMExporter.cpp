@@ -1,7 +1,3 @@
-//
-// Created by pavel on 14.9.15.
-//
-
 #include <fstream>
 #include "PPMExporter.h"
 

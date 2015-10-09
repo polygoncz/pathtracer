@@ -74,6 +74,14 @@ public:
         : x(x), y(y), z(z)
     { }
 
+    Vec3f(std::initializer_list<float> l)
+    {
+        assert(l.size() == 3);
+        int i = 0;
+        for (float v : l)
+            operator[](i++) = v;
+    }
+
     Vec3f(const Vec3f& v)
         : x(v.x), y(v.y), z(v.z)
     { }
@@ -238,6 +246,18 @@ public:
 Vec3f operator*(float k, const Vec3f& v)
 {
     return Vec3f(v.x * k, v.y * k, v.z * k);
+}
+
+inline float dot(const Vec3f& u, const Vec3f& v)
+{
+    return u.x * v.x + u.y * v.y + u.z * v.z;
+}
+
+inline Vec3f cross(const Vec3f& u, const Vec3f& v)
+{
+    return {u.y * v.z - u.z * v.y,
+            u.z * v.x - u.x * v.z,
+            u.x * v.y - u.y * v.x};
 }
 
 }

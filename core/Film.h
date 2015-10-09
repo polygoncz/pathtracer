@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include <vector>
 #include <assert.h>
-#include "core.h"
+#include "Core.h"
 
 namespace pathtracer
 {

@@ -10,7 +10,7 @@
 #include <assert.h>
 #include <limits>
 
-#include "core.h"
+#include "Core.h"
 
 namespace pathtracer
 {
@@ -32,6 +32,12 @@ public:
           depth(depth)
     { }
 
+    Ray(const Ray& r)
+        : o(r.o), d(r.d),
+          mint(r.mint), maxt(r.maxt),
+          epsilon(r.epsilon), depth(r.depth)
+    { }
+
     Vec3f operator()(float t) const
     {
         return o + d * t;
@@ -40,8 +46,8 @@ public:
     Vec3f o;
     Vec3f d;
     float mint, maxt;
-    float epsilon;
-    int depth;
+    mutable float epsilon;
+    mutable int depth;
 };
 
 class BBox

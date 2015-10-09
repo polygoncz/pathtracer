@@ -1,4 +1,4 @@
-#include "core/filter.h"
+#include "Filter.h"
 
 using namespace pathtracer;
 

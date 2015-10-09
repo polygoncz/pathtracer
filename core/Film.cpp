@@ -1,4 +1,4 @@
-#include "film.h"
+#include "Film.h"
 
 using namespace pathtracer;
 

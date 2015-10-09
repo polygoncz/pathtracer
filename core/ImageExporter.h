@@ -5,8 +5,8 @@
 #ifndef PATHTRACER_IMAGEEXPORTER_H
 #define PATHTRACER_IMAGEEXPORTER_H
 
-#include "film.h"
-#include "filter.h"
+#include "Film.h"
+#include "Filter.h"
 
 namespace pathtracer
 {
@@ -17,7 +17,7 @@ public:
     ImageExporter();
     virtual ~ImageExporter();
 
-    virtual void save(const char *path, Film *film, Filter *filter) const = 0;
+    virtual void save(const char *path, Film* film, Filter* filter) const = 0;
 };
 
 }
