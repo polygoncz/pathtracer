@@ -23,7 +23,6 @@ public:
     bool intersectP(const Ray& ray) const;
     BBox bounds() const;
 
-
     Vec3f background() const;
     void setBackground(const Vec3f &background);
 
