@@ -20,3 +20,7 @@ void Camera::computeUVW()
     v = cross(u, w);
     v.normalize();
 }
+Film* Camera::film() const
+{
+    return _film;
+}

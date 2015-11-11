@@ -45,6 +45,8 @@ public:
      */
     virtual void generateRay(const CameraSample& sample, Ray* ray) const = 0;
 
+    Film* film() const;
+
 protected:
     /**
      * Výpočet ortonormální báze pohledu.
@@ -52,7 +54,7 @@ protected:
     void computeUVW();
 
 protected:
-    Film* film; ///< Ukazatel na film.
+    Film* _film; ///< Ukazatel na film.
     Vec3f eye; ///< Bod pozorovatele.
     Vec3f target; ///< Bod cíle pozorování.
     Vec3f up; ///< Vektor natočení kamery.
