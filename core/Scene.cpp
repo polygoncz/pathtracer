@@ -50,3 +50,20 @@ void Scene::setAggregator(Aggregate* aggregator)
 {
     _aggregator = aggregator;
 }
+
+void Scene::build()
+{
+
+}
+
+Camera *Scene::camera() const
+{
+    return _camera;
+}
+
+void Scene::setCamera(Camera *camera)
+{
+    assert(camera);
+
+    _camera = camera;
+}

@@ -18,6 +18,8 @@
       <sourceFolder url="file://$MODULE_DIR$/core/Primitive.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/core/Random.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/core/Random.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/core/Renderer.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/core/Renderer.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/core/Scene.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/core/Scene.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/exporters/PPMExporter.cpp" isTestSource="false" />

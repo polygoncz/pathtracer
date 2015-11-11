@@ -3,7 +3,7 @@ project(pathtracer)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES filters/SimpleFilter.cpp filters/SimpleFilter.h exporters/PPMExporter.cpp exporters/PPMExporter.h core/Primitive.cpp core/Primitive.h core/Intersection.h core/Scene.cpp core/Scene.h core/Camera.cpp core/Camera.h shapes/Sphere.cpp shapes/Sphere.h core/Random.cpp core/Random.h)
+set(SOURCE_FILES filters/SimpleFilter.cpp filters/SimpleFilter.h exporters/PPMExporter.cpp exporters/PPMExporter.h core/Primitive.cpp core/Primitive.h core/Intersection.h core/Scene.cpp core/Scene.h core/Camera.cpp core/Camera.h shapes/Sphere.cpp shapes/Sphere.h core/Random.cpp core/Random.h core/Renderer.h core/Renderer.cpp)
 
 include_directories(${CMAKE_SOURCE_DIR})
 

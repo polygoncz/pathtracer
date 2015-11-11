@@ -28,9 +28,15 @@ public:
 
     Aggregate * aggregator() const;
     void setAggregator(Aggregate* aggregator);
+
+    void build();
+
+    Camera* camera() const;
+    void setCamera(Camera* camera);
 private:
     Vec3f _background;
     Aggregate* _aggregator;
+    Camera* _camera;
 };
 
 }
